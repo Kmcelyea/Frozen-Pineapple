@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<title> jQuery Mobile Radio Buttons </title>
+
+	<!-- jQuery Mobile CSS bits -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+
+	<!-- Javascript includes -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.4.2/mustache.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script>
+		$(function(){
+			var $radios1 = $('<fieldset data-role="controlgroup"></fieldset>')
+							.prepend(
+								$('<legend>Dynamic Radio Buttons, the hard way</legend>'),
+								$('<input />')
+									.attr({
+										'type':'radio',
+										'name': 'seasonings',
+										'id': 'seasonings-1',
+										'value': 'salt'
+									}),
+								$('<label />')
+									.attr({
+										'for':'seasonings-1'
+									}).text('Salt'),
+								$('<input />')
+									.attr({
+										'type':'radio',
+										'name': 'seasonings',
+										'id': 'seasonings-2',
+										'value': 'pepper'
+									}),
+								$('<label />')
+									.attr({
+										'for':'seasonings-2'
+									}).text('Pepper')
+							);
+			$('#content').prepend($radios1).trigger('create');
+
+			var radioGroup = '<label for="{{name}}-{{label}}">{{label}}</label>\
+		     				  <input type="radio" name="{{name}}" id="{{name}}-{{label}}" value="{{label}}" />';
+			var $radios2 = $('<fieldset data-role="controlgroup"></fieldset>')
+							.prepend(
+								$('<legend>Dynamic Radio Buttons, the easy way</legend>'),
+								$(Mustache.to_html(radioGroup, {'name': 'snack', 'label':'Cheese'})),
+								$(Mustache.to_html(radioGroup, {'name': 'snack', 'label':'Crackers'}))
+							);
+			$('#content').prepend($radios2).trigger('create');
+		});
+	</script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-6902792-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head> 
+<body> 
+	<div data-role="page">
+
+		<div data-role="header">
+			<h1>jQuery Mobile Radio Buttons</h1>
+		</div>
+
+		<div data-role="content" id="content">
+
+			<fieldset data-role="controlgroup">
+				<legend>Static Radio Buttons</legend>
+		     	<label for="pets-cat">Cat</label>
+		     	<input type="radio" name="pets" id="pets-cat" value="cat" checked="checked" />
+
+		     	<label for="pets-dog">Dog</label>
+		     	<input type="radio" name="pets" id="pets-dog" value="dog" />
+			</fieldset>
+
+		</div>
+		
+		<div data-role="footer" data-theme="c">
+			<p>&copy; 2012 - jQuery Mobile Boilerplate</p>
+		</div>	
+		
+	</div>
+</body>
+</html>
