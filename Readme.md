@@ -10,7 +10,13 @@ I do not intend to use copyright materials without permission should any be loca
 
 
 
+Plugins
+============
+-http://jquerymobile.com/resources/#Plugins
 
+-
+
+-
 
 Components
 =========
@@ -32,6 +38,15 @@ Scripts
 -
 
 
+Themes
+============
+-http://sgrebnov.github.com/jqmobile-metro-theme/samples/jqm-public-demo/index.html
+^Windows phone 7.5
+
+-http://taitems.github.com/iOS-Inspired-jQuery-Mobile-Theme/
+^iOS
+
+
 Information Links
 ========================
 Useful links
@@ -46,6 +61,8 @@ Useful links
 
 -http://www.andymatthews.net/read/2012/02/13/New-jQuery-Mobile-theme:-Twitter-Bootstrap
 
+-http://phonegap.com/
+^Author Native applications with web languages^
 
 
 Example Links
@@ -55,3 +72,9 @@ http://www.mrova.com/mobileTemplate/index.html
 http://www.tripwiremagazine.com/2012/07/mobile-website-templates.html
 
 http://twitter.github.com/bootstrap/examples.html
+
+
+Interesting Projects Related to Mobile Web Dev
+==================================
+http://the-m-project.org/
+MVC cross platform, HTML5, CSS3 ---Open source
