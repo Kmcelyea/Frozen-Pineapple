@@ -8,7 +8,11 @@ I do not intend to use copyright materials without permission should any be loca
 
  Anything I personally make and upload in a public repo is likely free to use unless stated otherwise.
 
+`Copy-and-Paste Snippet for CDN-hosted files (recommended):
 
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>`
 
 Plugins
 ============
@@ -47,6 +51,16 @@ Themes
 ^iOS
 
 
+Tools
+===================
+-http://graffletopia.com/stencils/792
+^Omni Graffle jQuery Mobile Templates
+
+-http://visualsignals.typepad.co.uk/vislog/2011/08/visio-shapes-for-jquery-mobile.html
+^Visio jQuery Mobile Templates
+
+
+
 Information Links
 ========================
 Useful links
@@ -63,6 +77,8 @@ Useful links
 
 -http://phonegap.com/
 ^Author Native applications with web languages^
+
+-http://zsprawl.com/iOS/zapps/jqm-reference/
 
 
 Example Links
