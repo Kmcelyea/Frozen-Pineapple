@@ -20,7 +20,9 @@ Information Links
 Useful links
 
 -http://jquerymobile.com/test/
+
 -http://jquerymobile.com/themeroller/index.php
+
 -http://andymatthews.net/code/jquery-mobile-icon-pack/
 
 
@@ -29,4 +31,5 @@ Useful links
 Example Links
 ====================
 http://www.mrova.com/mobileTemplate/index.html
+
 http://www.tripwiremagazine.com/2012/07/mobile-website-templates.html
