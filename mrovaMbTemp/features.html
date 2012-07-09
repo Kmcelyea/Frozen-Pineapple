@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+Design by mRova Solutions
+http://www.mrova.com
+Released for free under a Creative Commons Attribution 2.5 License
+-->
+<html>
+	<head>
+		<title>Free Mobile Template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/photoswipe.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+		<script type="text/javascript" src="js/klass.min.js"></script>
+		<script type="text/javascript" src="js/code.photoswipe.jquery-3.0.4.min.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+	</head>
+	<body>
+		<div data-role="page" data-add-back-btn="true">
+			<div data-role="header" id="header">
+				<h1>Mobile Template</h1>
+			</div><!-- /header -->
+			<div data-role="content">
+				<h2>Buttons</h2>
+                
+                <p>Buttons with different icons:</p>
+                <a href="#" data-role="button" data-icon="delete" data-theme="a">Link button</a> 
+                <a href="#" data-role="button" data-icon="arrow-l" data-theme="a">Link button</a> 
+                <a href="#" data-role="button" data-icon="arrow-d" data-theme="a">Link button</a> 
+                <a href="#" data-role="button" data-icon="check" data-theme="a">Link button</a> 
+                
+                <p>Grouped buttons</p>
+                <div data-type="horizontal" data-role="controlgroup">
+                     <a data-role="button" href="#" data-theme="a">Yes</a>
+                     <a data-role="button" href="#" data-theme="a">No</a>
+                     <a data-role="button" href="#" data-theme="a">Maybe</a>
+            	</div>
+                
+                <p>Horizontal grouped buttons with icons:</p>
+                <div data-type="horizontal" data-role="controlgroup">
+                    <a data-icon="plus" data-role="button" href="#" data-theme="a">Add</a>
+                    <a data-icon="delete" data-role="button" href="#" data-theme="a">Delete</span></a>
+                </div>
+            
+                <p>Horizontal grouped buttons, icon only:</p>
+                <div data-type="horizontal" data-role="controlgroup">
+                    <a data-iconpos="notext" data-icon="arrow-u" data-role="button" href="#" title="Up" data-theme="a">Up</a>
+                    <a data-iconpos="notext" data-icon="arrow-d" data-role="button" href="#" title="Down" data-theme="a">Down</span></a>
+                    <a data-iconpos="notext" data-icon="delete" data-role="button" href="#" title="Delete" data-theme="a">Delete</span></a>
+                </div>
+                
+                <p>Action buttons</p>
+                <a href="#" data-role="button" data-inline="true">Cancel</a>
+                <a href="#" data-role="button" data-inline="true" data-theme="a">Save</a>
+            
+            	<h2>Layout formating</h2>
+                
+                <p>50% width A grid</p>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a" data-theme="a"><div style="height: 120px;" class="ui-bar ui-bar-d">Block A</div></div>
+                    <div class="ui-block-b"><div style="height: 120px;" class="ui-bar ui-bar-d">Block B</div></div>
+                </div><!-- /grid-a -->
+                
+                <p>33.3333% width B grid</p>
+                <div class="ui-grid-b">
+                    <div class="ui-block-a"><div style="height: 120px;" class="ui-bar ui-bar-a">Block A</div></div>
+                    <div class="ui-block-b"><div style="height: 120px;" class="ui-bar ui-bar-d">Block B</div></div>
+                    <div class="ui-block-c"><div style="height: 120px;" class="ui-bar ui-bar-a">Block C</div></div>
+                </div><!-- /grid-b -->
+                
+                <p>25% width C grid</p>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a"><div style="height: 120px;" class="ui-bar ui-bar-d">Block A</div></div>
+                    <div class="ui-block-b"><div style="height: 120px;" class="ui-bar ui-bar-a">Block B</div></div>
+                    <div class="ui-block-c"><div style="height: 120px;" class="ui-bar ui-bar-a">Block C</div></div>
+                    <div class="ui-block-d"><div style="height: 120px;" class="ui-bar ui-bar-d">Block D</div></div>
+                </div><!-- /grid-c -->
+                
+                <p>A grid usage:</p>
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a"><button type="submit" data-theme="b">Cancel</button></div>
+                    <div class="ui-block-b"><button type="submit" data-theme="a">Submit</button></div>	   
+                </fieldset>
+                
+                <h2>Accordions</h2>
+                		
+                <p>Style 1</p>
+                <div data-role="collapsible-set">
+                
+                    <div data-role="collapsible">
+                    <h3>Section 1</h3>
+                    <p>I'm the collapsible set content for section B.</p>
+                    </div>
+                    
+                    <div data-role="collapsible">
+                    <h3>Section 2</h3>
+                    <p>I'm the collapsible set content for section B.</p>
+                    </div>
+                    
+                    <div data-role="collapsible">
+                    <h3>Section 3</h3>
+                    <p>I'm the collapsible set content for section C.</p>
+                    </div>
+                    
+                </div>
+                
+                <p>Style 2</p>
+                <div data-role="collapsible-set" data-theme="a" data-content-theme="c">
+                
+                    <div data-role="collapsible">
+                    <h3>Section 1</h3>
+                    <p>I'm the collapsible set content for section B.</p>
+                    </div>
+                    
+                    <div data-role="collapsible">
+                    <h3>Section 2</h3>
+                    <p>I'm the collapsible set content for section B.</p>
+                    </div>
+                    
+                    <div data-role="collapsible">
+                    <h3>Section 3</h3>
+                    <p>I'm the collapsible set content for section C.</p>
+                    </div>
+                    
+                </div>
+                
+                <p>Multiple styling</p>
+                <div data-role="collapsible-set">
+                
+                    <div data-role="collapsible" data-theme="c" data-content-theme="d">
+                    <h3>Section 1</h3>
+                    <p>I'm the collapsible set content for section B.</p>
+                    </div>
+                    
+                    <div data-role="collapsible" data-theme="a" data-content-theme="a">
+                    <h3>Section 2</h3>
+                    <p>I'm the collapsible set content for section B.</p>
+                    </div>
+                    
+                    <div data-role="collapsible" data-theme="b" data-content-theme="b">
+                    <h3>Section 3</h3>
+                    <p>I'm the collapsible set content for section C.</p>
+                    </div>
+                    
+                </div>
+				<p class="copyright">Copyright &copy; mobi. Designed by <a href="http://mrova.com" class="ui-link">mRova</a></p>
+			</div><!-- /content -->
+			  <div data-role="footer" data-theme="a">
+            <div class="ui-bar">
+             <a href="share-dialog.html"  data-role="button" data-icon="star" data-theme="a" data-rel="dialog">Share</a> 
+             <a href="contact.html" data-role="button" data-icon="plus" data-theme="a">Contact</a>
+             <a href="" data-role="button" data-icon="arrow-u" data-theme="a" style="float:right;" class="returnTopAction">Return top</a>             
+           </div>
+          </div>
+          <!-- /Footer --> 
+
+		</div><!-- /page -->
+	</body>
+</html>

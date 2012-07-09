@@ -1,0 +1,19 @@
+ul li:not(:first-child) {
+	padding-left: 70px !important;
+}
+	ul li:not(:first-child) img {
+		margin: 10px 10px 0 10px;
+	}
+	ul li:not(:first-child) h3 {
+		margin: 0 0 5px 0;
+	}
+	ul li:not(:first-child) p {
+		margin: 0;
+		overflow: visible;
+		white-space: normal;
+		line-height: 20px;
+	}
+	ul li:not(:first-child) span {
+		font-size: 10px;
+		font-weight: normal;
+	}
