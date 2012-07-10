@@ -1,0 +1,46 @@
+chapter: The Mobile Platform
+==================
+<!DOCTYPE html>
+ <html>
+ <head>
+        <meta charset="utf-8" />
+        <title>My first jQuery Mobile code</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-
+1.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/
+jquery.mobile-1.0.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+ <body>
+ <div data-role="page" data-theme="a">
+        <div data-role="header">
+                <h1>jQuery Mobile</h1>
+        </div>
+        <div data-role="content">
+
+                <ul data-role="listview" data-inset="true" data-divider-theme="b">
+                     <li data-role="list-divider">Summary</li>
+                     <li><a href="ch1.html">The Platform</a></li>
+                     <li><a href="cap2.html">The Page</a></li>
+                     <li><a href="cap3.html">Lists</a></li>
+                     <li><a href="cap4.html">Components</a></li>
+                </ul>
+
+                <ul data-role="listview" data-inset="true" data-divider-theme="d">
+                     <li data-role="list-divider">Links</li>
+                     <li><a href="http://www.mobilexweb.com">Mobile Web Blog</a></li>
+                     <li><a href="http://www.oreilly.com">O'Reilly Media</a></li>
+                </ul>
+
+        </div>
+     <div data-role="footer">
+        <h4>&copy; 2011 Maximiliano Firtman @firt</h4>
+     </div>
+ </div>
+ </body>
+ </html>
+    
+    
+==================

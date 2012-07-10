@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQM Conference</title>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<link rel="stylesheet" href="jquery.mobile-1.0.css" />
+<script src="jquery.js"></script>
+<script src="script.js"></script>
+<script src="jquery.mobile-1.0.js"></script>
+</head>
+
+<body>
+
+<div data-role="dialog">
+
+  <div data-role="header">
+    <h1>Feedback</h1>
+  </div>
+  
+  <div data-role="content">
+     <form action="feedback.php" method="post" data-transition="none">
+
+       <div data-role="fieldcontain">
+         <label for="name">Name:</label>
+         <input type="text" name="name" id="name" value="" required />
+       </div>
+
+       <div data-role="fieldcontain">
+         <label for="email">Email:</label>
+         <input type="email" name="email" id="email" value="" required />
+       </div>
+       
+       <div data-role="fieldcontain">
+         <label for="comments">Comments:</label>
+         <textarea cols="40" rows="8" name="comments" id="comments"></textarea>
+       </div>
+       
+	   <div data-role="fieldcontain">
+         <label for="contacted">Can we contact you?</label>
+         <select name="contacted" id="contacted" data-role="slider">
+           <option value="no">No</option>
+           <option value="yes">Yes</option>
+         </select>
+       </div>
+	   
+       <input type="submit" value="Send" data-theme="a">
+     
+     </form>
+  </div>
+  
+</div>
+</body>
+</html>

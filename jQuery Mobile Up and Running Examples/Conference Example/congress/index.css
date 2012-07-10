@@ -1,0 +1,37 @@
+
+/* Some styles for header */
+.ui-header {
+	background-color: #69C;
+	background-image: url('images/fondo.png');
+	background-position: top right;
+	background-repeat: no-repeat
+}
+
+/* Some styles for offline installation process */
+#console, #consoleInstall {
+	background-color: #FF6;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding: 5px;
+	margin: 0;
+	text-align: center;
+	border: 1px solid #CCC;
+	font-size: small;
+}
+
+/* Home's content area */
+#home [data-role=content] {
+	background-color: white;
+	text-align: center;
+}
+
+/* Buttons */
+.openWithoutInstall {
+	margin-top: 50px; 
+	display: block;
+}
+
+/* Navbar text */
+[data-role=navbar] .ui-btn-text {
+	font-size: smaller;	
+}

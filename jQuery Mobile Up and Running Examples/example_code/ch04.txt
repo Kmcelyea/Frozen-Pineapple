@@ -1,0 +1,348 @@
+chapter: Lists
+==================
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8" />
+ <title>Up and Running with jQuery Mobile</title>
+ <link rel="stylesheet" href="jquery.mobile-1.0.min.css" />
+ <script src="jquery-1.6.4.min.js"></script>
+ <script type="text/javascript" src="jquery.mobile-1.0.min.js">
+ </script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+ <div data-role="page" id="main">
+
+   <div data-role="header">
+     <h1>HTML5 and APIs</h1>
+   </div>
+
+   <div data-role="content">
+      <ul data-role="listview">
+          <li>Offline Access
+          <li>Geolocation API
+          <li>Canvas
+          <li>Offline Storage
+          <li>New semantic tags
+      </ul>
+   </div>
+
+  </div>
+
+ </body>
+</html>
+    
+    
+====================================
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Typical jQuery Mobile header goes here -->
+</head>
+
+<body>
+
+ <div data-role="page" id="main">
+
+   <div data-role="header">
+     <h1>Chapters</h1>
+   </div>
+
+   <div data-role="content">
+      <ol data-role="listview">
+          <li>The Mobile Jungle
+          <li>Mobile Browsing
+          <li>Architecture and Design
+          <li>Setting up your environment
+          <li>Markups and Standards
+          <li>Coding Markup
+          <li>CSS for Mobile Browsers
+          <li>JavaScript Mobile
+          <li>Ajax, RIA and HTML5
+          <li>Server-Side Browser Detection
+          <li>Geolocation and Maps
+          <li>Widgets and Offline webapps
+          <li>Testing, Debugging and Performance
+          <li>Distribution and Social Web 2.0
+      </ol>
+   </div>
+
+  </div>
+
+ </body>
+</html>
+    
+    
+====================================
+<ol data-role="listview" data-inset="true">
+    <!-- item rows -->
+</ol>
+    
+    
+====================================
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Typical jQuery Mobile header goes here -->
+</head>
+
+<body>
+
+ <div data-role="page" id="main">
+
+   <div data-role="header">
+     <h1>World Cup</h1>
+   </div>
+
+   <div data-role="content">
+      <ul data-role="listview">
+          <li data-role="list-divider">Group A
+          <li>Argentina
+          <li>Nigeria
+          <li>England
+          <li>Japan
+          <li data-role="list-divider">Group B
+          <li>United States
+          <li>Mexico
+          <li>Korea
+          <li>Greece
+          <li data-role="list-divider">Group C
+          <li>Germany
+          <li>Finland
+          <li>Chile
+          <li>South Africa
+      </ul>
+   </div>
+
+  </div>
+
+ </body>
+</html>
+    
+    
+====================================
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Typical jQuery Mobile header goes here -->
+</head>
+
+<body>
+
+ <div data-role="page" id="main">
+
+   <div data-role="header">
+     <h1>Interactive</h1>
+   </div>
+
+   <div data-role="content">
+      <ul data-role="listview">
+          <li><a href="#page2">Internal Page link</a>
+          <li><a href="other.html">External Page link</a>
+          <li><a href="http://www.mobilexweb.com">Absolute external link</a>
+
+          <li><a href="tel:+13051010200">Call to a phone number using a link</a>
+          <li><a href="javascript:alert('Hi!')">JavaScript link</a>
+      </ul>
+   </div>
+
+  </div>
+
+ </body>
+</html>
+    
+    
+====================================
+<li><a href="#page2"> Internal Page link </a>
+    
+    
+====================================
+<li data-icon="info"><a href="#moreinfo">More information</a></li>
+    
+    
+====================================
+<li data-icon="false"><a href="#page2">No icon interactive row</a></li>
+    
+    
+====================================
+<li>
+    Item title
+    <ul data-role="listview">
+        <!-- Nested list items -->
+    </ul>
+    
+    
+====================================
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Typical jQuery Mobile header goes here -->
+</head>
+
+<body>
+
+ <div data-role="page" id="main">
+
+   <div data-role="header">
+     <h1>Training</h1>
+   </div>
+
+   <div data-role="content">
+      <ul data-role="listview">
+          <li><a href="order.html">Order Now!</a>
+
+          <li>Cities available
+                <ul data-role="listview">
+                      <li>Boston
+                      <li>New York
+                      <li>Miami
+                      <li>San Francisco
+                      <li>San Jose
+                </ul>
+
+          <li>Topics
+                <ul data-role="listview">
+                      <li>Intro to Mobile Web
+                            <ul data-role="listview">
+                                <li>WML and other oldies
+                                <li>XHTML MP
+                                <li>HTML 4.01
+                                <li>HTML5
+                            </ul>
+                      <li>Mobile Browsers
+                            <ul data-role="listview">
+                                <li>Safari for iOS
+                                <li>Android Browser
+                                <li>Firefox for Mobile
+                                <li>Opera
+                            </ul>
+                      <li>Tablet Browsers
+                      <li>Using jQuery
+                </ul>
+
+          <li>Promotions
+                <ul data-role="listview">
+                      <li>10% off before May
+                      <li><a href="promo3x2.html">3x2</a>
+                      <li>10% off to subscribers
+                </ul>
+
+      </ul>
+   </div>
+
+  </div>
+
+ </body>
+</html>
+    
+    
+====================================
+<!DOCTYPE html>
+ <html>
+
+ <head>
+   <!-- Typical jQuery Mobile header goes here -->
+ </head>
+
+ <body>
+
+  <div data-role="page" id="main">
+
+    <div data-role="header">
+      <h1>Your Friends</h1>
+    </div>
+
+    <div data-role="content">
+       <ul data-role="listview">
+           <li><a href="details/bill">Bill Gates</a>
+               <a href="edit/bill"></a>
+
+           <li><a href="details/steve">Steve Jobs</a>
+               <a href="edit/steve"></a>
+
+           <li><a href="details/mark">Mark Zuckerberg</a>
+               <a href="edit/mark"></a>
+
+           <li><a href="details/larry">Larry Page</a>
+               <a href="edit/larry"></a>
+       </ul>
+    </div>
+
+   </div>
+
+
+  </body>
+ </html>
+    
+    
+====================================
+<li>
+   <img src="/icons/email.png" class="ul-li-icon">
+   Send by e-mail
+    
+    
+====================================
+<li>
+   <img src="/thumb/washington.png">
+   George Washington
+    
+    
+====================================
+<!DOCTYPE html>
+ <html>
+
+ <head>
+   <!-- Typical jQuery Mobile header goes here -->
+
+ </head>
+
+ <body>
+
+    <div data-role="header">
+      <h1>Order online</h1>
+    </div>
+
+    <div data-role="content">
+       <ul data-role="listview">
+           <li><a href="buy.html">Soda</a>
+               <span class="ui-li-aside">$1.00</span>
+           <li><a href="buy.html">Sandwich</a>
+               <span class="ui-li-aside">$3.20</span>
+           <li><a href="buy.html">Ice cream</a>
+               <span class="ui-li-aside">$1.50</span>
+       </ul>
+    </div>
+
+   </div>
+
+ </body>
+ </html>
+    
+    
+====================================
+<li><a href="inbox.html">Inbox</a>
+    <span class="ui-li-count">86</span>
+    
+    
+====================================
+<ul data-role="listview" data-filter="true">
+  <!-- list rows -->
+</ul>
+    
+    
+====================================
+<ul data-role="listview" data-filter="true" data-filter-placeholder=
+    "Search contacts...">
+  <!-- list rows -->
+</ul>
+    
+    
+==================

@@ -1,0 +1,276 @@
+chapter: Form Components
+==================
+<form action="send.php" action="get">
+
+</form>
+    
+    
+====================================
+<form action="send.php" action="get" data-transition="pop">
+
+</form>
+    
+    
+====================================
+<label for="company">Company Name:</label>
+<input type="text" id="company">
+    
+    
+====================================
+<div data-role="fieldcontainer">
+<label for="company">Company Name:</label>
+<input type="text" id="company" name="company">
+</div>
+<div data-role="fieldcontainer">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+</div>
+    
+    
+====================================
+<div data-role="fieldcontainer">
+<label for="search">Search:</label>
+<input type="search" id="search" name="search">
+</div>
+    
+    
+====================================
+<div data-role="fieldcontainer">
+<label for="comments">Your comments:</label>
+<textarea id="comments" name="comments></textarea>
+</div>
+    
+    
+====================================
+<div data-role="fieldcontainer">
+<label for="name">Your Name:</label>
+<input type="text" id="name" required placeholder="Enter your name">
+</div>
+
+<div data-role="fieldcontainer">
+<label for="age">Your Age:</label>
+<input type="number" id="age" required placeholder="Enter your age" min="10" 
+max="110">
+</div>
+    
+    
+====================================
+<div data-role="fieldcontainer">
+<label for="birth">Your Birthdate:</label>
+<input type="date" id="birth" name="birth">
+
+<label for="favmonth">Your favorite month:</label>
+<input type="month" id="favmonth" name="favmonth">
+</div>
+    
+    
+====================================
+<div data-role="fieldcontainer">
+<label for="qty">Quantity:</label>
+<input type="range" id="qty" name="qty" min="1" max="100" value="5">
+</div>
+    
+    
+====================================
+<div data-role="fieldcontainer">
+<label for="qty">Quantity:</label>
+<input type="range" id="qty" name="qty" min="1" max="100" value="5" data-theme="e" 
+data-track-theme="b">
+</div>
+    
+    
+====================================
+  <label for="updated">Receive updates</label>
+<select id="updated" name="updated" data-role="slider">
+<option value="no">No</option>
+<option value="yes">Yes</option>
+</select>
+    
+    
+====================================
+  <label for="training">Training</label>
+<select id="training" name="training">
+<option value="1">HTML5</option>
+<option value="2">jQuery Mobile</option>
+<option value="3">iOS</option>
+<option value="4">Android</option>
+<option value="5">BlackBerry</option>
+<option value="6">Qt for Meego</option>
+</select>
+    
+    
+====================================
+  <label for="lang">Languages you like</label>
+<select id="lang" name="lang" multiple>
+<option value="1">C/C++</option>
+<option value="2">Objective-C</option>
+<option value="3">Java</option>
+<option value="4">C#</option>
+<option value="5">Visual Basic</option>
+<option value="6">ActionScript</option>
+<option value="7">Delphi</option>
+<option value="8">Phyton</option>
+<option value="9">JavaScript</option>
+<option value="10">Ruby</option>
+<option value="11">PHP</option>
+</select>
+    
+    
+====================================
+<div data-role="controlgroup">
+<legend>Color and Size</legend>
+<select id="color" name="color">
+<option value="1">Blue</option>
+<option value="2">White</option>
+<option value="3">Red</option>
+<option value="4">Black</option>
+<option value="5">Pink</option>
+</select>
+<select id="size" name="size">
+<option value="1">X-Small</option>
+<option value="2">Small</option>
+<option value="3">Medium</option>
+<option value="4">Large</option>
+<option value="5">X-Large</option>
+</select>
+</div>
+
+<div data-role="controlgroup" data-type="horizontal">
+<legend>Week day and time</legend>
+<select id="weekday" name="weekday" multiple>
+<option value="1">Mon</option>
+<option value="2">Tue</option>
+<option value="3">Wed</option>
+<option value="4">Thu</option>
+<option value="5">Fri</option>
+</select>
+<select id="time" name="time">
+<option value="1">Morning</option>
+<option value="2">Midday</option>
+<option value="3">Afternoon</option>
+</select>
+    
+    
+====================================
+<div data-role="controlgroup" data-type="horizontal">
+<legend>Delivery options</legend>
+
+<label for="weekday">Week day</label>
+<select id="weekday" name="weekday" multiple>
+<option value="1">Mon</option>
+<option value="2">Tue</option>
+<option value="3">Wed</option>
+<option value="4">Thu</option>
+<option value="5">Fri</option>
+</select>
+<label for="time">Time</label>
+<select id="time" name="time">
+<option value="1">Morning</option>
+<option value="2">Midday</option>
+<option value="3">Afternoon</option>
+</select>
+</div>
+    
+    
+====================================
+  <label for="training">Training</label>
+<select id="training" name="training" data-native-menu="false">
+<option value="1">HTML5</option>
+<option value="2">jQuery Mobile</option>
+<option value="3">iOS</option>
+<option value="4">Android</option>
+<option value="5">BlackBerry</option>
+<option value="6">Qt for Meego</option>
+</select>
+    
+    
+====================================
+  <label for="training">Training</label>
+<select id="training" name="training" data-native-menu="false" data-overlay-theme="e">
+<option value="0" data-placeholder="true">Select your training</option>
+<option value="1">HTML5</option>
+<option value="2">jQuery Mobile</option>
+<option value="3">iOS</option>
+<option value="4">Android</option>
+<option value="5">BlackBerry</option>
+<option value="6">Qt for Meego</option>
+</select>
+    
+    
+====================================
+<legend>Menu type</legend>
+
+<label for="menuNative1">Native menu, single selection</label>
+<input type="radio" id="menuNative1" name="menuType" value="1">
+
+<label for="menuNative2">Native menu, multiple selection</label>
+<input type="radio" id="menuNative2" name="menuType" value="2">
+
+<label for="menuNonNative1">Non-native menu, single selection</label>
+<input type="radio" id="menuNonNative1" name="menuType" value="3">
+
+<label for="menuNonNative2">Non-native menu, multiple selection</label>
+<input type="radio" id="menuNonNative2" name="menuType" value="4">
+    
+    
+====================================
+<div data-role="controlgroup">
+<-- label and radio elements go here -->
+</div>
+    
+    
+====================================
+<legend>Delivery method</legend>
+
+<div data-role="controlgroup" data-type="horizontal">
+
+<label for="deliveryUPS">UPS</label>
+<input type="radio" id="deliveryUPS" name="delivery" value="ups">
+
+<label for="deliveryDHL">DHL</label>
+<input type="radio" id="deliveryDHL" name="delivery" value="dhl">
+
+<label for="deliveryFedex">FedEx</label>
+<input type="radio" id="deliveryFedex" name="delivery" value="fedex">
+
+</div>
+    
+    
+====================================
+  <label for="accept">I accept terms and conditions</label>
+<input type="checkbox" id="accept" name="accept" value="yes">
+    
+    
+====================================
+<legend>Delivery options</legend>
+
+<div data-role="controlgroup">
+
+<label for="optionGift">Pack it as a Gift</label>
+<input type="checkbox" id="optionGift" name="optionGift" value="yes">
+
+<label for="optionBag">Send it with a bag</label>
+<input type="checkbox" id="optionBag" name="optionBag" value="yes">
+
+<label for="optionRemove">Remove the box</label>
+<input type="checkbox" id="optionRemove" name="optionRemove" value="yes">
+
+</div>
+    
+    
+====================================
+<div data-role="controlgroup" data-type="horizontal">
+
+<label for="bold">B</label>
+<input type="checkbox" id="bold" name="bold" value="yes">
+
+<label for="italic">I</label>
+<input type="checkbox" id="italic" name="italic" value="yes">
+
+<label for="underline">U</label>
+<input type="checkbox" id="underline" name="underline" value="yes">
+
+</div>
+    
+    
+==================

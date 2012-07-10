@@ -1,0 +1,10 @@
+chapter: Packaging for Stores
+==================
+$(document).bind("mobileinit", function() {
+    $.support.cors = true;
+    $.mobile.allowCrossDomainPages = true;
+    $.mobile.pushState = false;
+});
+    
+    
+==================

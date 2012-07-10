@@ -1,0 +1,354 @@
+chapter: Starting with the Framework
+==================
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/
+jquery.mobile-1.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+    
+    
+====================================
+<link rel="stylesheet" 
+href="http://code.jquery.com/mobile/1.0/jquery.mobile.structure-1.0.min.css" />
+<-- Our theme CSS file here -->
+
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+    
+    
+====================================
+<link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" 
+      type="text/css" />
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+    
+    
+====================================
+<!DOCTYPE html>
+ <html>
+
+ <head>
+        <meta charset="utf-8" />
+        <title>Your Title</title>
+        <link rel="stylesheet" 
+          href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript" 
+         src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+ <body>
+
+ </body>
+
+</html>
+    
+    
+====================================
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+====================================
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+    
+====================================
+<div data-role="page">
+
+   <div data-role="header">
+
+   </div>
+   <div data-role="content">
+
+   </div>
+   <div data-role="footer">
+
+   </div>
+
+</div>
+    
+    
+====================================
+<div data-role="page">
+
+   <div data-role="header">
+      <h1>Our first webapp</h1>
+   </div>
+   <div data-role="content">
+      <p>This is the main content of the page</p>
+   </div>
+   <div data-role="footer">
+      <h4>More on mobilexweb.com</h4>
+   </div>
+
+</div>
+    
+    
+====================================
+<div data-role="page" data-add-back-btn="true" data-back-btn-text="Previous" 
+     data-back-btn-theme="e">
+
+</div>
+    
+    
+====================================
+<body>
+
+<div data-role="page" id="page1">
+
+   <div data-role="header">
+      <h1>First page</h1>
+   </div>
+   <div data-role="content">
+      <p>This is the main content of the page.</p>
+      <p>You can go to the <a href="#page2">second page</a>.</p>
+
+   </div>
+   <div data-role="footer">
+      <h4>mobilexweb.com</h4>
+   </div>
+
+</div>
+
+<div data-role="page" id="page2" data-title="This is the second page">
+
+   <div data-role="header">
+      <h1>Second page</h1>
+   </div>
+   <div data-role="content">
+      <p>This is the main content of the second page</p>
+      <p>You can go back using the header’s button, <a href="#page1">clicking here</a>
+or using your browser’s back button.
+   </div>
+   <div data-role="footer">
+      <h4>mobilexweb.com</h4>
+   </div>
+
+</div>
+
+</body>
+    
+    
+====================================
+<a href="otherDocument.html">Go to next page</a>
+    
+    
+====================================
+<a href='newpage.html' data-prefetch>Go to this new page</a>
+    
+    
+====================================
+<a href="http://www.mobilexweb.com" data-rel="external">Check my blog</a>
+    
+    
+====================================
+<a href="http://www.mobilexweb.com" target="_blank">Check my blog</a>
+
+<a href="http://www.otherdomain.com/whatever">Check my blog</a>
+    
+    
+====================================
+<a href="otherpage.html" data-ajax="false">Other page</a>
+    
+    
+====================================
+<a href="#page2" data-transition="pop">second page</a>
+    
+    
+====================================
+<!-- This link goes to an external page, shown as a dialog -->
+<a href="./confirmation.html" data-rel="dialog">Delete this item</a>
+    
+    
+====================================
+<!-- This link goes to an external page, shown as a dialog -->
+<a href="./confirmation.html" data-rel="dialog" data-transition="pop">
+    Delete this item</a>
+    
+    
+====================================
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8" />
+ <title>Up and Running with jQuery Mobile</title>
+ <link rel="stylesheet" href="jquery.mobile-1.0.min.css" />
+ <script src="jquery-1.6.4.min.js"></script>
+ <script type="text/javascript" src="jquery.mobile-1.0.min.js">
+ </script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+ <div data-role="page" id="main">
+
+   <div data-role="header">
+     <h1>Book Properties</h1>
+   </div>
+
+   <div data-role="content">
+        <h2>Up and Running with jQuery Mobile</h2>
+     <p>Author: <b>Maximiliano Firtman</b></p>
+     <p>This book has no reviews yet on our database.</p>
+
+        <p>
+         <a href="./confirmation.html" data-rel="dialog"
+data-transition="pop" data-role="button">
+         Delete this book
+         </a>
+
+         <a href="" data-role="button">
+          Modify this book
+         </a>
+     </p>
+   </div>
+
+   <div data-role="footer">
+     <h4>O'Reilly Store</h4>
+   </div>
+
+  </div>
+
+ </body>
+</html>
+    
+    
+====================================
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8" />
+ <title>Delete Confirmation</title>
+ <link rel="stylesheet" href="jquery.mobile-1.0.min.css" />
+ <script src="jquery-1.6.4.min.js"></script>
+ <script type="text/javascript" src="jquery.mobile-1.0.min.js">
+ </script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+ <div data-role="page" id="alert">
+   <div data-role="header">
+     <h1>Confirmation</h1>
+   </div>
+   <div data-role="content">
+     <h2>Are you sure you want to delete this book?</h2>
+
+     <!-- This will be a normal page loading -->
+        <a href="delete-yes.html" data-role="button">Yes, delete</a>
+
+     <!-- This is just a close link -->
+     <a href="delete.html" data-role="button">Cancel</a>
+   </div>
+
+ </div>
+
+ </body>
+</html>
+    
+    
+====================================
+<a href="tel:+1800229933">Call us free!</a>
+    
+    
+====================================
+<a href="facetime:101010">Call me using Facetime</a>
+    
+    
+====================================
+<a href="skype:skype_user?call">Call us using Skype</a>
+    
+    
+====================================
+<a href="mailto:info@mobilexweb.com">Mail us</a>
+<a href="mailto:info@mobilexweb.com?subject=Contact%20from%20mobile">Mail us</a>
+<a href="mailto:info@mobilexweb.com?subject=Contact&body=This%20is%20the%20body">
+Mail us</a>
+    
+    
+====================================
+<a href="mailto:info@mobilexweb.com?subject=Contact&body=This%20is%20the%20
+body%0D%0AThis%20is%20a%20new%20line">Mail us</a>
+
+<a href="mailto:info@mobilexweb.com?subject=Contact&body=This%20is%20the%20body<br />
+This%20is%20a%20new%20line">Mail us from iPhone</a>
+    
+    
+====================================
+<a href="sms://">Send an SMS</a>
+
+<a href="sms://?body=Visit%20the%20best%20site%20at%20http://mobilexweb.com">
+Invite a friend by SMS<a>
+
+<a href="sms://+3490322111">Contact us by SMS</a>
+
+<a href="sms://+3490322111?body=Interested%20in%20Product%20AA2">More info for product
+ AA2</a>
+    
+    
+====================================
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8" />
+ <title>Up and Running with jQuery Mobile</title>
+ <link rel="stylesheet" href="jquery.mobile-1.0.min.css" />
+ <script src="jquery-1.6.4.min.js"></script>
+ <script type="text/javascript" src="jquery.mobile-1.0.min.js">
+ </script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<div data-role="page" id="main">
+   <div data-role="header">
+     <h1>Special Links</h1>
+   </div>
+   <div data-role="content">
+     <p>Use the following buttons for testing special mobile behaviours.</p>
+
+        <p>
+         <a href="tel:+1800229933" data-role="button">
+          Call the White House
+         </a>
+
+         <a href="sms:+1800229933" data-role="button">
+          SMS the White House
+         </a>
+
+         <a href="sms:+1800229933?body=Hello!" data-role="button">
+          SMS with a body text
+         </a>
+
+         <a href="mailto:info@mobilexweb.com?subject=Sent%20from%20the%20web"
+ data-role="button">
+          Mail me
+         </a>
+
+         <a href="skype:maximiliano.firtman?call" data-role="button">
+          Skype me
+         </a>
+
+         <a href="facetime:+1800229933" data-role="button">
+          Call using Facetime
+         </a>
+          (iOS with camera only)
+
+     </p>
+   </div>
+   <div data-role="footer">
+     <h4>www.mobilexweb.com</h4>
+   </div>
+  </div>
+
+ </body>
+ </html>
+    
+    
+==================

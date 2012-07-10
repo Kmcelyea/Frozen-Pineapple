@@ -1,0 +1,200 @@
+chapter: Installation and Offline Access
+==================
+CACHE MANIFEST: 
+
+# jQuery core
+http://code.jquery.com/jquery-1.6.1.min.js 
+
+# jQuery Mobile files without custom theme 
+http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css
+http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js
+http://code.jquery.com/mobile/1.0/images/ajax-loader.png
+http://code.jquery.com/mobile/1.0/images/icons-18-black.png
+http://code.jquery.com/mobile/1.0/images/icons-18-white.png
+http://code.jquery.com/mobile/1.0/images/icons-36-black.png
+http://code.jquery.com/mobile/1.0/images/icons-36-white.png 
+
+# My app files, relative to the HTML document 
+images/logo.png
+data/countries.json
+    
+    
+====================================
+<?php header('Content-Type: text/cache-manifest'); 
+?>CACHE MANIFEST:
+    
+    
+====================================
+<html manifest="offline.appcache">
+      <-- Rest of our webapp --> 
+</html>
+    
+    
+====================================
+CACHE MANIFEST: 
+
+# jQuery core
+http://code.jquery.com/jquery-1.6.1.min.js 
+
+# jQuery Mobile files without custom theme 
+http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css
+http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js
+http://code.jquery.com/mobile/1.0/images/ajax-loader.png
+http://code.jquery.com/mobile/1.0/images/icons-18-black.png
+http://code.jquery.com/mobile/1.0/images/icons-18-white.png
+http://code.jquery.com/mobile/1.0/images/icons-36-black.png
+http://code.jquery.com/mobile/1.0/images/icons-36-white.png 
+
+# My app files, relative to the HTML document 
+images/logo.png 
+
+# Resources that should be downloaded from the web 
+NETWORK: 
+data/countries.json
+    
+    
+====================================
+NETWORK: 
+*
+    
+    
+====================================
+CACHE MANIFEST 
+# webapp updated 2012-01-01
+    
+    
+====================================
+if (window.applicationCache!=undefined) {
+      // The API is available 
+}
+    
+    
+====================================
+if (window.applicationCache!=undefined) {
+      // The API is available 
+      if (applicationCache.status==applicationCache.UPDATEREADY) { 
+         // There is an update waiting for reload 
+      } 
+}
+    
+    
+====================================
+if (window.applicationCache!=undefined) {
+      // The API is available 
+      applicationCache.addEventListener('updateready', function() { 
+         // There is an update waiting for reload 
+         if (confirm("There is an update ready. Do you want to load it now?")) { 
+            history.reload(); 
+         }
+      }); 
+}
+    
+    
+====================================
+<link rel="icon" type="image/png" href="favicon.png" /> 
+<link rel="shortcut icon" type="image/png" href="favicon.png" />
+    
+    
+====================================
+<link rel="icon" href="icons/icon32.png"> 
+<link rel="shortcut icon" href="icons/icon32.png"> 
+
+<link rel="apple-touch-icon" href="icons/icon57.png" sizes="57x57"> 
+<link rel="apple-touch-icon" href="icons/icon114.png" sizes="114x114">
+<link rel="apple-touch-icon" href="icons/icon72.png" sizes="72x72"> 
+<link rel="apple-touch-icon" sizes="80x80" href="icons/icon80.png"> 
+<link rel="apple-touch-icon-precomposed" sizes="android-only" href="icons/icon57.png">
+    
+    
+====================================
+<meta name="apple-mobile-web-app-capable"
+    content="yes">
+    
+    
+====================================
+if (navigator.standalone!=undefined) { 
+    // It's iOS 
+    if (!navigator.standalone) { 
+       // It's in Safari
+       $.mobile.changePage($("#install"), {transition: "none"}); 
+    } 
+}
+    
+    
+====================================
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    
+====================================
+<link rel="apple-touch-startup-image" href="images/launch.png">
+    
+    
+====================================
+<link rel="apple-touch-startup-image" href="images/launch-iphone.png" 
+    media="(max-device-width: 480px)">
+<link rel="apple-touch-startup-image" href="images/launch-iPad-p.png"
+    media="screen and (min-device-width: 481px) and (max-device-width: 1024px) 
+    and (orientation:portrait)"> 
+<link rel="apple-touch-startup-image" href="images/launch-iPad-l.png"
+    media="screen and (min-device-width: 481px) and (max-device-width: 1024px) 
+    and (orientation:landscape)">
+    
+    
+====================================
+<!DOCTYPE HTML> 
+<-- HTML definition with Offline Application Cache manifest --> 
+<html manifest="offline.appcache"> 
+<head> 
+ <meta charset="UTF-8">
+ <title>short title</title> 
+ <meta name="viewport" content="width=device-width,user-scalable=no"> 
+
+ <-- jQuery Mobile files with custom theme --> 
+ <link rel="stylesheet" 
+     href="http://code.jquery.com/mobile/1.0/jquery.mobile.structure-1.0.min.css" /> 
+ <link rel="stylesheet" href="custom_theme.css"> 
+ <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+ <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+ <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js">
+     </script>
+    
+ <-- Icons --> 
+ <link rel="icon" href="icons/icon32.png">
+ <link rel="shortcut icon" href="icons/icon32.png"> 
+    
+ <link rel="apple-touch-icon" href="icons/icon57.png" sizes="57x57"> 
+ <link rel="apple-touch-icon" href="icons/icon114.png" sizes="114x114">
+ <link rel="apple-touch-icon" href="icons/icon72.png" sizes="72x72">
+ <link rel="apple-touch-icon" sizes="80x80" href="icons/icon80.png">
+ <link rel="apple-touch-icon-precomposed" sizes="android-only" href="icons/icon57.png">
+   
+ <-- If we want to have a chrome-less webapp --> 
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black">
+ <link rel="apple-touch-startup-image" href="images/launch-iphone.png"
+     media="(max-device-width: 480px)"> 
+ <link rel="apple-touch-startup-image" href="images/launch-iPad-p.png"
+     media="screen and (min-device-width: 481px) and (max-device-width: 1024px)
+     and (orientation:portrait)"> 
+ <link rel="apple-touch-startup-image" href="images/launch-iPad-l.png" 
+     media="screen and (min-device-width: 481px) and (max-device-width: 1024px) 
+     and (orientation:landscape)">
+   
+</head> 
+
+<body> 
+
+<!-- jQuery Mobile's pages -->
+
+</body>
+    
+    
+====================================
+localStorage.setItem("name", "value");
+    
+    
+====================================
+var value = localStorage.getItem("name");
+    
+    
+==================

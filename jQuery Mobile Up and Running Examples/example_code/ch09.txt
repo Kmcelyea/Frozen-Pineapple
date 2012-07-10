@@ -1,0 +1,608 @@
+chapter: A Complete Webapp
+==================
+CACHE MANIFEST
+
+CACHE:
+
+# jQuery Mobile's files
+jquery.js 
+jquery.mobile.js
+jquery.mobile.css
+images/ajax-loader.png
+images/icons-18-black.png
+images/icons-18-white.png
+images/icons-36-black.png
+images/icons-36-white.png
+
+# HTML documents
+# index.html is always cached implicitly
+feedback.html
+
+# Custom script and CSS
+index.js
+index.css
+
+# Custom images
+logo.png
+sponsors.png
+background.png
+
+# We don't need to cache iOS icons or launch image as the
+# platform will cache it by itself
+
+NETWORK:
+# We will go to the network only for the JSON file
+# and the script that will receive the feedback
+# replace mobilexweb.com with your own domain
+http://mobilexweb.com/jqmbook/sessions.json
+http://mobilexweb.com/jqmbook/feedback.php
+    
+    
+====================================
+<!DOCTYPE HTML>
+<html manifest="manifest.appcache">
+<head>
+<meta charset="UTF-8">
+<title>jQM Conference</title>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<link rel="stylesheet" href="jquery.mobile-1.0.css" />
+<link rel="stylesheet" href="index.css" />
+<script src="jquery.js"></script>
+<script src="index.js"></script>
+<script src="jquery.mobile-1.0.js"></script>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" sizes="80x80" href="icons/icon80.png">
+<link rel="apple-touch-icon" href="images/icon57.png" sizes="57x57">
+<link rel="apple-touch-icon" href="images/icon114.png" sizes="114x114">
+<link rel="apple-touch-icon" href="images/icon72.png" sizes="72x72">
+<link rel="apple-touch-icon-precomposed" sizes="android-only" 
+   href="images/icon57.png">
+</head>
+
+<body>
+
+<!-- **** HOME PAGE **** -->
+
+<div data-role="page" id="home">
+
+  <div data-role="content">
+    <p><img src="images/logo.png" alt="jQM Conference" width="300" height="62" 
+        align="middle">
+        </p>
+    <h3>November 5th</h3>
+    <div class="ui-grid-a">
+      <div class="ui-block-a"><a href="http://www.twitter.com/fakeaccount" 
+          data-role="button" data-theme="b" target="_blank">Twitter</a></div>
+      <div class="ui-block-b"><a href="http://www.facebook.com/fakeaccount" 
+          data-role="button" data-theme="b" target="_blank">Facebook</a></div>
+    </div>
+  </div>
+
+  <div data-role="footer" data-position="fixed" data-id="toolbar">
+    <div data-role="navbar">
+      <ul>
+        <li><a class="ui-btn-active" href="#home" data-icon="home" 
+                data-transition="fade">
+                Home</a></li>
+        <li><a href="#sessions" data-icon="grid" data-transition="fade">Sessions</a>
+        </li>
+        <li><a href="#where" data-icon="info" data-transition="fade">Where</a></li>
+        <li><a href="#about" data-icon="star" data-transition="fade">About</a></li>
+        <li><a href="feedback.html" data-icon="plus" data-rel="dialog">Feedback</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- **** SESSIONS PAGE **** -->
+
+<div data-role="page" id="sessions">
+
+  <div data-role="header">
+    <h1>Sessions</h1>
+    <a href='javascript:refresh();' data-icon="refresh" id="refresh" data-theme="c" 
+        class="ui-btn-left" data-iconpos="notext"></a>
+  </div>
+
+  <div data-role="content">
+    <p id="console"></p>
+    <ul data-role="list-view" data-inset="true" id="slots">
+    </ul>
+  </div>
+
+  <div data-role="footer" data-position="fixed" data-id="toolbar">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="home" data-transition="fade">Home</a></li>
+        <li><a class="ui-btn-active" href="#sessions" data-icon="grid" 
+                data-transition="fade">Sessions</a></li>
+        <li><a href="#where" data-icon="info" data-transition="fade">Where</a></li>
+        <li><a href="#about" data-icon="star" data-transition="fade">About</a></li>
+        <li><a href="feedback.html" data-icon="plus" data-rel="dialog">Feedback</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- **** SESSION'S DETAILS PAGE **** -->
+
+<div data-role="page" id="details" data-add-back-btn="true">
+
+  <div data-role="header">
+    <h1>Session detail</h1>
+  </div>
+
+  <div data-role="content">
+    <div id="sessionInfo"> </div>
+  </div>
+
+  <div data-role="footer" data-position="fixed" data-id="toolbar">
+   <div data-role="navbar">
+    <ul>
+     <li><a href="#home" data-icon="home" data-transition="fade">Home</a></li>
+     <li><a href="#sessions" data-icon="grid" data-transition="fade">Sessions</a></li>
+     <li><a href="#where" data-icon="info" data-transition="fade">Where</a></li>
+     <li><a href="#about" data-icon="star" data-transition="fade">About</a></li>
+     <li><a href="feedback.html" data-icon="plus" data-rel="dialog">Feedback</a></li>
+    </ul>
+   </div>
+  </div>
+
+</div>
+
+<!-- **** WHERE PAGE **** -->
+
+<div data-role="page" id="where">
+
+  <div data-role="header">
+    <h1>Where</h1>
+  </div>
+
+  <div data-role="content">
+     Hasta la vista 1234, ACME City
+
+  </div>
+
+  <div data-role="footer" data-position="fixed" data-id="toolbar">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="home" data-transition="fade">Home</a></li>
+        <li><a href="#sessions" data-icon="grid" data-transition="fade">Sessions</a>
+        </li>
+        <li><a class="ui-btn-active" href="#where" data-icon="info" 
+                data-transition="fade">Where</a></li>
+        <li><a href="#about" data-icon="star" data-transition="fade">About</a></li>
+        <li><a href="feedback.html" data-icon="plus" data-rel="dialog">Feedback</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- **** ABOUT PAGE **** -->
+
+<div data-role="page" id="about">
+
+  <div data-role="header">
+    <h1>About</h1>
+  </div>
+
+  <div data-role="content">
+    <div data-role="collapsible">
+        <h3>Organization</h3>
+        <p>This congress is organized by ACME</p>
+    </div>
+    <div data-role="collapsible">
+        <h3>Dates</h3>
+        <p>November 5th, 2015 9am to 6pm</p>
+    </div>
+    <div data-role="collapsible">
+        <h3>History</h3>
+        <p>First edition of this congress was........</p>
+    </div>
+    <div data-role="collapsible">
+        <h3>Sponsors</h3>
+      <img src="images/sponsors.png" width="300" height="400">
+    </div>
+  </div>
+
+  <div data-role="footer" data-position="fixed" data-id="toolbar">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="home" data-transition="fade">Home</a></li>
+        <li><a href="#sessions" data-icon="grid" data-transition="fade">Sessions</a>
+        </li>
+        <li><a href="#where" data-icon="info" data-transition="fade">Where</a></li>
+        <li><a class="ui-btn-active" href="#about" data-icon="star" 
+                data-transition="fade">About</a></li>
+        <li><a href="feedback.html" data-icon="help" data-transition="fade">Feedback
+        </a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- **** iOS INSTALLATION DIALOG PAGE **** -->
+<div data-role="page" id="ios">
+
+  <div data-role="header">
+    <h1>installation</h1>
+  </div>
+
+  <div data-role="content">
+    <p id="consoleInstall">Complete the installation</p>
+    <div id="install">
+         <p>To finish the installation, you must add this webapp to your Home Screen. 
+             To do that, touch the arrow and select "Add to Home Screen"</p>
+    </div>
+    <a href="javascript:openWithoutInstallation()" class="openWithoutInstall">Open 
+        without installation</a>
+  </div>
+
+</div>
+
+</body>
+</html>
+    
+    
+====================================
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQM Conference</title>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<link rel="stylesheet" href="jquery.mobile-1.0.css" />
+<script src="jquery.js"></script>
+<script src="script.js"></script>
+<script src="jquery.mobile-1.0.js"></script>
+</head>
+
+<body>
+
+<div data-role="dialog">
+
+  <div data-role="header">
+    <h1>Feedback</h1>
+  </div>
+
+  <div data-role="content">
+     <form action="feedback.php" method="post" data-transition="none">
+
+       <div data-role="fieldcontain">
+         <label for="name">Name:</label>
+         <input type="text" name="name" id="name" value="" required />
+       </div>
+
+       <div data-role="fieldcontain">
+         <label for="email">Email:</label>
+         <input type="email" name="email" id="email" value="" required />
+       </div>
+
+       <div data-role="fieldcontain">
+         <label for="comments">Comments:</label>
+         <textarea cols="40" rows="8" name="comments" id="comments"></textarea>
+       </div>
+
+           <div data-role="fieldcontain">
+         <label for="contacted">Can we contact you?</label>
+         <select name="contacted" id="contacted" data-role="slider">
+           <option value="no">No</option>
+           <option value="yes">Yes</option>
+         </select>
+       </div>
+
+       <input type="submit" value="Send" data-theme="a">
+
+     </form>
+  </div>
+
+</div>
+</body>
+</html>
+    
+    
+====================================
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQM Conference</title>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<link rel="stylesheet" href="jquery.mobile-1.0.css" />
+<script src="jquery.js"></script>
+<script src="script.js"></script>
+<script src="jquery.mobile-1.0.js"></script>
+</head>
+
+<body>
+
+<div data-role="dialog">
+
+  <div data-role="header">
+    <h1>Feedback</h1>
+  </div>
+
+  <div data-role="content">
+
+     <?php
+         // Validation and processing here
+
+         ?>
+     Thanks for your feedback.
+
+     <a data-role="button" data-inverse="true" href="index.html">Close</a>
+
+  </div>
+
+</div>
+</body>
+</html>
+    
+    
+====================================
+/* Some styles for header */
+.ui-header {
+        background-color: #69C;
+        background-image: url('images/background.png');
+        background-position: top right;
+        background-repeat: no-repeat
+}
+
+/* Some styles for offline installation process */
+#console, #consoleInstall {
+        background-color: #FF6;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        padding: 5px;
+        margin: 0;
+        text-align: center;
+        border: 1px solid #CCC;
+        font-size: small;
+}
+
+/* Home's content area */
+#home [data-role=content] {
+        background-color: white;
+        text-align: center;
+}
+
+/* Buttons */
+.openWithoutInstall {
+        margin-top: 50px;
+        display: block;
+}
+
+/* Navbar text */
+[data-role=navbar] .ui-btn-text {
+      font-size: smaller;
+}
+    
+    
+====================================
+{
+  "slots":
+   [
+     // Some slots are special times –opening, breaks, lunch, etc.-
+     { "id": 1, "time": "09:00", "message": "Opening" },
+     // Some slots are session times
+     { "id": 2, "time": "09:20"}
+   ],
+  "sessions":
+   [
+        { "id": 1, "title": "A great session", "timeId": 2,
+          "description": "...", "speaker": "...", "room": "..." }
+   ]
+}
+    
+    
+====================================
+var data;
+
+$(document).bind("mobileinit", function() {
+
+        if (navigator.platform=="iPhone" || navigator.platform=="iPad" ||
+                navigator.platform=="iPod" || navigator.platform=="iPad" ||
+                navigator.platform=="iPhone Simulator" ) {
+
+                // It's an iOS device, we check if we are in chrome-less mode
+                if (!navigator.standalone) {
+                        showIOSInvitation();
+                }
+        }
+
+        /* We capture the sessions page load to check dynamic session data */
+        $("#sessions").live("pageshow", function() {
+
+                if (window.localStorage!=undefined) {
+                        // HTML5 Local Storage is available
+                        if (window.localStorage.getItem("data")!=undefined &&
+                                       window.localStorage.getItem("data")!=null) {
+                                // We first load the offline stored session  
+                                // information while checking updates
+                                showSessions(window.localStorage.getItem("data"));
+                                $("#console").html("Checking data update");
+                        } else {
+                                // There is no local storage cache
+                                $("#console").html("Downloading session data...");
+                        }
+                } else {
+                        // No HTML5 Local Storage, downloading JSON every time
+                        $("#console").html("Downloading session data...");
+                }
+
+                loadSessionsAjax();
+        });
+
+});
+
+function showIOSInvitation() {
+ setTimeout(function() {
+        // We hide the saving information until the whole webapp is downloaded
+        $("#install").hide();
+        // We open the iOS instructions for adding to the homepage
+        $.mobile.changePage($("#ios"), {transition: "slideup", 
+            changeHash: false});
+ }, 100);
+
+ // We capture HTML5 Application Cache events to provide useful information
+ if (window.applicationCache!=undefined) {
+        window.applicationCache.addEventListener('checking', function() {
+                $("#consoleInstall").html("Checking version");
+        });
+
+        window.applicationCache.addEventListener('downloading', function() {
+                $("#consoleInstall").html("Downloading application. 
+                    Please wait...");
+        });
+
+        window.applicationCache.addEventListener('cached', function() {
+                $("#consoleInstall").html("Application downloaded");
+                $("#install").show();
+        });
+
+        window.applicationCache.addEventListener('updateready', function() {
+                $("#consoleInstall").html("Application downloaded");
+                $("#install").show();
+        });
+        window.applicationCache.addEventListener('noupdate', function() {
+                $("#consoleInstall").html("Application downloaded");
+                $("#install").show();
+        });
+        window.applicationCache.addEventListener('error', function(e) {
+                $("#consoleInstall").html("There was an error downloading this 
+                    app");
+        });
+        window.applicationCache.addEventListener('obsolete', function(e) {
+                $("#consoleInstall").html("There was an error downloading this 
+                    app");
+        });
+        }
+
+ }
+
+function loadSessionsAjax() {
+ // We bring the JSON as text so it's easy to store in Local Storage
+   $.ajax(/*"http://www.mobilexweb.com/congress/*/"sessions.json", {
+     complete: function(xhr) {
+         if (window.localStorage!=undefined) {
+                 if (window.localStorage.getItem("data")!=undefined && 
+                     window.localStorage.getItem("data")!=null) {
+                         if (xhr.responseText==window.localStorage.getItem("data")) {
+                                 // The new session downloaded is the same as the
+                                 // one in screen
+                                 $("#console").html("Schedule is updated");
+                         } else {
+                                 // There is an update on the session data
+                                 if (confirm("There is an update in the schedule 
+                                     available, do you want to load it now?")) {
+                                         $("#console").html("Schedule is updated");
+                                         showSessions(xhr.responseText);
+                                 } else {
+                                         $("#console").html("Schedule will be 
+                                            updated later");
+                                 }
+                         }
+                 } else {
+                         // Local Storage is available but no previous 
+                         // cache found
+                         $("#console").html("Schedule is updated");
+                         showSessions(xhr.responseText);
+                 }
+         } else {
+                 // No Local Storage, show the info without saving
+                 $("#console").html("Schedule is updated");
+                 showSessions(xhr.responseText);
+         }
+  },
+  dataType: 'text',
+  error: function() {
+         $("#console").html("Schedule update could not be downloaded");
+  }
+ });
+}
+
+
+var isFirstLoad = true;
+
+function showSessions(string) {
+        if (window.JSON!=undefined) {
+                data = JSON.parse(string);
+        } else {
+            data = eval("(" + string + ")");
+        }
+        if (window.localStorage!=undefined) {
+                // Save the new data as string
+                window.localStorage.setItem("data", string);
+        }
+
+        $("#slots").html("");
+
+        var html = "";
+        for (var i=0; i<data.slots.length; i++) {
+
+                if (data.slots[i].message!=null) {
+                      // This is an special slot, so we create a divider
+                      html += "<li data-role='list-divider' data-groupingtheme='e'>" + 
+                          data.slots[i].time + ": " + data.slots[i].message  + "</li>";
+                } else {
+                      // This is a normal slot with sessions
+                      html += "<li><a href='javascript:showDetails(" + i + ")'
+                          >Sessions of " + 
+                          data.slots[i].time + "</a></li>";
+                }
+        }
+
+        $("#slots").html(html);
+
+        if (isFirstLoad) {
+                $("#slots").listview();
+                isFirstLoad = false;
+        } else {
+                $("#slots").listview('refresh');
+        }
+
+}
+
+function showDetails(index) {
+        $("#details h1").html("Sessions of " + data.slots[index].time);
+        var html = ""
+        for (var i=0; i<data.sessions.length; i++) {
+                if (data.sessions[i].timeId==data.slots[index].id) {
+                        // We create one collapsible component per session
+                        html += "<div data-role='collapsible'>";
+                        html += "<h3>" + data.sessions[i].title + "</h3>";
+                        html +=" <h3>" + data.sessions[i].room + "</h3>";
+                        html += "<h4>Speaker/s: " + data.sessions[i].speaker;
+                        html += "</h4>";
+                        html += "<p>" + data.sessions[i].description + "</p>";
+                        html += "</div>";
+                }
+        }
+        // We provide the information to the details page
+        $("#sessionInfo").html(html);
+        $("#sessionInfo div").collapsible();
+
+        // We change to the details page
+        $.mobile.changePage($("#details"));
+}
+
+function refresh() {
+        $("#console").html("Verifying...");
+        loadSessionsAjax();
+}
+
+function openWithoutInstallation() {
+        // We remove the dialog-like iOS installation page
+        $.mobile.changePage($("#home"), {transition:"slideup", reverse:true});
+}
+    
+    
+==================

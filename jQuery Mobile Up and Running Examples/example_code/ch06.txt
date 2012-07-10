@@ -1,0 +1,354 @@
+chapter: The Framework and JavaScript
+==================
+$(document).bind('mobileinit', function() {
+    // Initialization code here
+});
+    
+    
+====================================
+<!DOCTYPE html>
+<html>
+ <head>
+        <meta charset="utf-8" />
+        <title>My first jQuery Mobile code</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-
+1.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+
+        <!-- CUSTOM INITIALIZATION CODE -->
+        <script src="customcode.js"></script>
+
+        <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-
+1.0.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+ </html>
+    
+    
+====================================
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+
+<script>
+$(document).bind("mobileinit", function() {
+        // Our initialization code here
+});
+<script>
+
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-
+1.0.min.js"></script>
+    
+    
+====================================
+$(document).bind("mobileinit", function() {
+        // We change default values
+        $.mobile.defaultPageTransition = "fade";
+        $.mobile.minScrollBack = 150;
+        $.mobile.activeBtnClass = "active-button";
+});
+    
+    
+====================================
+$(document).bind("mobileinit", function() {
+        // We change default values
+        $.mobile.ns = "firt";
+});
+    
+    
+====================================
+<div data-firt-role="page">
+   <div data-firt-role="header" data-firt-theme="a">
+
+   </div>
+   <div data-firt-role="content">
+
+   </div>
+</div>
+    
+    
+====================================
+// Global strings
+$.mobile.loadingMessage = "loading";
+$.mobile.pageLoadErrorMessage = "Error Loading Page";
+
+// Widget strings
+$.mobile.page.prototype.options.backBtnText = "Back";
+$.mobile.dialog.prototype.options.closeBtnText = "Close"
+$.mobile.collapsible.prototype.options.expandCueText = 
+ " click to expand contents";
+$.mobile.collapsible.prototype.options. collapseCueText = " click to collapse contents";
+$.mobile.listview.prototype.options.filterPlaceholder = "Filter items...";
+$.mobile.selectmenu.prototype.options.closeText = "Close";
+    
+    
+====================================
+$(document).bind('mobileinit', function() {
+  // Global strings
+  $.mobile.loadingMessage = "cargando";
+  $.mobile.pageLoadErrorMessage = "Error Cargando Página";
+
+  // Widget strings
+  $.mobile.page.prototype.options.backBtnText = "Atrás";
+  $.mobile.dialog.prototype.options.closeBtnText = "Cerrar"
+  $.mobile.collapsible.prototype.options.expandCueText = 
+   " click para expandir contenido";
+  $.mobile.collapsible.prototype.options. collapseCueText = 
+   " click para cerrar contenido";
+  $.mobile.listview.prototype.options.filterPlaceholder = "Filtrar ítems...";
+  $.mobile.selectmenu.prototype.options.closeText = "Cerrar";
+
+});
+    
+    
+====================================
+$(document).bind('mobileinit', function() {
+    $.mobile.touchOverflowEnabled=true;
+});
+    
+    
+====================================
+$(document).bind('mobileinit', function() {
+  $.mobile.page.prototype.options.addBackBtn   = true;
+  $.mobile.page.prototype.options.backBtnTheme = "e";
+  $.mobile.page.prototype.options.headerTheme  = "b";
+  $.mobile.page.prototype.options.footerTheme  = "d";
+});
+    
+    
+====================================
+$(document).bind('mobileinit', function() {
+    // Enables filtering on all the listviews
+    $.mobile.listview.prototype.filter = true;
+
+    // Enables non-native menus for all selects
+    $.mobile.selectmenu.prototype.nativeMenu=false;
+});
+    
+    
+====================================
+var buttons = $("a[data-role=button"]);
+    
+    
+====================================
+var buttons = $("a:jqmData(role='button')");
+    
+    
+====================================
+$("a").jqmRemoveData("transition");
+$("#button1").jqmData("theme", "a");
+    
+    
+====================================
+var currentPageId = $.mobile.activePage.id;
+    
+    
+====================================
+$.mobile.changePage("external.html");
+    
+    
+====================================
+$.mobile.changePage($("#pageId"));
+    
+    
+====================================
+$.mobile.changePage($("#page2"), {
+    transition: "slide",
+    reverse: true
+});
+    
+    
+====================================
+<script>
+function viewProduct(idProduct) {
+   $.mobile.changePage("productdetail.php", {
+       method: "post",
+       data: {
+           action: 'getProduct',
+           id: idProduct
+       },
+       transition: "fade"
+   });
+}
+</script>
+
+<!-- ... -->
+<a href="javascript:viewProduct(5200)" data-role="button">Product details</a>
+    
+    
+====================================
+// This code shows the loading message and hide it after 2 seconds
+$.mobile.showPageLoadingMsg();
+setTimeout(function() {
+    $.mobile.hidePageLoadingMsg();
+}, 2000);
+    
+    
+====================================
+$.mobile.transitionHandlers.explode = explodeTransitionHandler;
+    
+    
+====================================
+$.mobile.defaultTransitionHandler = explodeTransitionHandler;
+    
+    
+====================================
+<div data-role="page">
+        <div data-role="header">
+    <h1>Dynamic page</h1>
+    </div>
+        <div data-role="content">
+        <a id="button1" href="javascript:addPages()" data-role="button">Add Pages</a>
+        <ul id="list1">
+
+        </ul>
+    </div>
+</div>
+    
+    
+====================================
+function addPages() {
+  for (var i=1; i<5; i++) {
+      var page = $("<div>").jqmData("role", "page").attr("id", "page" + i);
+      // header
+      $("<div>").attr("data-role", "header").append($("<h1>")
+          .html("Page " + i)).appendTo(page);
+      // content
+      $("<div>").attr("data-role", "content").append($("<p>")
+          .html("Contents for page " + i))
+          .appendTo(page);
+
+      $("body").append(page);
+
+           $("<li>").append($("<a>").attr("href", "#page"+i).html("Go to page " + i))
+           .appendTo("#list1");
+  }
+      $("#button1").hide();
+};
+    
+    
+====================================
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<title>jQuery Mobile</title>
+<script src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.mobile-1.0.css">
+<script src="jquery.mobile-1.0.js"></script>
+<script>
+$(document).bind('pagebeforechange', function(event, data) {
+        // We receive the destination page in data.toPage and we normalize it
+        var url = $.mobile.path.parseUrl(data.toPage).hash;
+
+        if (url!=undefined && url.length>5 && url.substring(0, 5)=="#page") {
+                // We dynamically inject a new page
+                var id = url.substring(5);
+
+                // We will use a page template already in the DOM
+                $("#pageTemplate h1").html("Page " + id);
+
+                // We change to the real page template without using 
+                // its real page id in history
+                $.mobile.changePage($("#pageTemplate"), {dataUrl: data.toPage});
+
+                // We prevent normal page transition
+                event.preventDefault();
+        }
+
+});
+
+</script>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+
+</head>
+
+<body>
+<div data-role="page">
+        <div data-role="header">
+    <h1>Dynamic pages</h1>
+    </div>
+        <div data-role="content">
+        <a id="button1" href="#page1" data-role="button">Page 1</a>
+        <a id="button1" href="#page2" data-role="button">Page 2</a>
+        <a id="button1" href="#page3" data-role="button">Page 3</a>
+        <a id="button1" href="#page4" data-role="button">Page 4</a>
+    </div>
+</div>
+<div data-role="page" id="pageTemplate">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">Content</div>
+  <div data-role="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+</body>
+</html>
+    
+    
+====================================
+$("a").button();
+    
+    
+====================================
+var button = $("<a>").attr("href", "somewhere.html").button();
+    
+    
+====================================
+$("#list1").listview('refresh');
+$("#checkbox").val('true').checkboxradio('refresh');
+    
+    
+====================================
+<ul id="list1">
+</ul>
+    
+    
+====================================
+$("#list1").listview('refresh');
+    
+    
+====================================
+$("#element").grid();
+    
+    
+====================================
+$("#content").html(newHTMLcontentWithWidgets);
+$("#page1").trigger("create");
+    
+    
+====================================
+$("#page2").live("pageinit", function(event) {
+
+});
+    
+    
+====================================
+$(document).bind("pageloadfailed", function(event, data) {
+     data.preventDefault();
+     // Custom error management
+});
+    
+    
+====================================
+$(document).bind("orientationchange", function(orientation) {
+    if (orientation=="landscape") {
+         // We are now in landscape
+    } else {
+         // We are now in portrait
+    }
+});
+    
+    
+====================================
+$(document).bind("mobileinit", function() {
+   $("#page2").live("swiperight", goBackToPage1);
+});
+
+function goBackToPage1() {
+   $.mobile.changePage("#page1", { reverse: true });
+   $("#page2").unbind("swiperight", goBackToPage1);
+}
+    
+    
+==================
