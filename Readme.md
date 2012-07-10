@@ -87,6 +87,9 @@ Useful links
 
 -http://www.mobilexweb.com/
 
+-http://www.catswhocode.com/blog/how-to-create-offline-html5-web-apps-in-5-easy-steps
+
+
 
 Example Links
 ====================
