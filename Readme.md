@@ -17,11 +17,17 @@ Copy-and-Paste Snippet for CDN-hosted files (recommended):
 
 Browsers that support for offline web apps
 -IE : NO
+
 -Firefox 3.5+ : YES
+
 -Safari 4.0+ : YES
+
 -Chrome 5.0+ : YES
+
 -Opera 10.6+ : YES
+
 -iPhone 2.1+ : YES
+
 -Android 2.0+ : YES
 
 
